@@ -5,8 +5,8 @@ int     main (void)
 {
         int *a;
         int *b;
-	int c;
-	int d;
+		int c;
+		int d;
 
 	c = 0;
 	d = 200;

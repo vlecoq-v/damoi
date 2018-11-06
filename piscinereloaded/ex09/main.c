@@ -3,7 +3,7 @@
 
 int	main (void)
 {
-	int *i;
+	int i[0];
 
 	*i = 0;
 	printf("VALEUR DE I = %d\n", *i);

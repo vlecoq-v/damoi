@@ -5,7 +5,7 @@ int	main ()
 {
 	int nb;
 
-	nb = ft_recursive_factorial(-1);
+	nb = ft_recursive_factorial(12);
 	printf("VALEUR DE FACTORIEL = %d\n", nb);
 	return (0);
 } 
