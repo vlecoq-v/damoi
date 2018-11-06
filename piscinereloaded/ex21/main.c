@@ -8,17 +8,17 @@ int	main()
 	int	min;
 	int	max;
 
+	tab = NULL;
 	i = 0;
-	min = -4;
-	max = 2;
-	printf("%d\n", tab[i]);
+	min = -10;
+	max = 0;
+//	printf("%d\n", tab[i]);
 	tab = ft_range(min, max);
 	if (tab == NULL)
 		return (0);
-	printf("CHECK\n");
-	printf("%d\n", tab[i]);
-	i--;
-	while (i++ < max - min - 1)
-		printf("tab = %d\n", tab[i]);
+//	printf("CHECK\n");
+//	printf("%d\n", tab[i]);
+	while (i < max - min)
+		printf("tab = %d\n", tab[i++]);
 	return (0);
 }
