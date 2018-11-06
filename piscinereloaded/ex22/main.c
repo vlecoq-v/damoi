@@ -5,7 +5,7 @@ int	main()
 {
 	int	x;
 
-	x = 0;
+	x = 33;
 	printf("valeur absolue de x = %d", ABS(x));
 	return(0);
 }

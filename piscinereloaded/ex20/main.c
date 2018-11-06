@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include "ft_strdup.c"
 
 int	main()
@@ -8,8 +10,8 @@ int	main()
 	char *s2;
 
 	s1 = "	  test2";
-	s2 = "test2";
-	printf("RESULTAT OFFICIEL = %s\n", strdup(s1));
-	printf("RESULTAT COPIE = %s\n", ft_strdup(s1));
+	s2 = "askdjf  \0 as";
+	printf("RESULTAT OFFICIEL = |%s|\n", strdup(s2));
+	printf("RESULTAT COPIE = |%s|\n", ft_strdup(s2));
 	return (0);
 }
