@@ -6,11 +6,11 @@
 /*   By: vlecoq-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 11:10:24 by vlecoq-v          #+#    #+#             */
-/*   Updated: 2018/11/06 11:19:47 by vlecoq-v         ###   ########.fr       */
+/*   Updated: 2018/11/06 12:00:19 by vlecoq-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+int		ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {
