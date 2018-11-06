@@ -1,16 +1,28 @@
-#include  "ft_putchar.c"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vlecoq-v <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/06 11:10:24 by vlecoq-v          #+#    #+#             */
+/*   Updated: 2018/11/06 11:19:47 by vlecoq-v         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {
-	int i;
-	char X;
+	int		i;
+	char	x;
 
 	i = 26;
-	X = 'a';
+	x = 'a';
 	while (i != 0)
 	{
-		ft_putchar(X);
+		ft_putchar(x);
 		i--;
-		X++;
+		x++;
 	}
 }
