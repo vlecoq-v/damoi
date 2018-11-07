@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "ft_count_if.c"
+#include <stdlib.h>
 
 int	ft_count_if(char **tab, int(*f)(char*));
 
@@ -17,9 +18,16 @@ int	main()
 {
 	char **tab;
 	int (*f)(char*);
+	int		i;
 
+	tab = (char**)malloc(sizeof(char*)*5);
+	i = 0;
+	while (i < 5)
+	{
+		tab[i] = (char*)malloc(sizeof(char)*10);
+		i++;
+	}
 	f = &ft_strlen;
-//	tab[3];
 	tab[0] = "test";
 	tab[1] = "";
 	tab[2] = "t";
