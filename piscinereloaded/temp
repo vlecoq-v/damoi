@@ -1,0 +1,39 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: vlecoq-v <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/11/06 18:08:40 by vlecoq-v          #+#    #+#              #
+#    Updated: 2018/11/07 18:46:45 by vlecoq-v         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+NAME = libft.a
+CFLAGS = -Wall -Werror -Wextra
+SRCS_PATH = ./srcs/
+SRCS_NAME =	ft_putchar.c \
+			ft_pustr.c \
+			ft_strcmp.c \
+			ft_strlen.c \
+			ft_swap.c
+
+CPPFLAGS = -I ./includes/
+OBJ_PATH = ./
+OBJ = $(SRC_NAME:.c=.o)
+AR = ar -rc
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	gcc $(NAME) $(OBJ) $^
+
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re:	fclean all

@@ -1,43 +1,42 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: vlecoq-v <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/11/06 18:08:40 by vlecoq-v          #+#    #+#              #
-#    Updated: 2018/11/07 16:45:49 by vlecoq-v         ###   ########.fr        #
+#    Created: 2018/11/07 18:47:26 by vlecoq-v          #+#    #+#              #
+#    Updated: 2018/11/07 18:48:56 by vlecoq-v         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
-FLAG = -Wall -Wextra -Werror
-FUNCTION = ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
+DIR= ./srcs/
 
-all: $(NAME)
+SRC= $(DIR)ft_putchar.c      \  
+	 $(DIR)ft_putstr.c        \
+	 $(DIR)ft_strcmp.c        \
+	 $(DIR)ft_strlen.c        \
+	 $(DIR)ft_swap.c
 
-$(NAME): putchar putstr strcmp strlen swap
-	ar -rc $(NAME) $(FUNCTION)
+OBJ=        $(SRC:.c=.o)
 
-putchar:
-	gcc $(FLAG) -c srcs/ft_putchar.c includes/ft_putchar.h
+NAME=        libft.a
 
-putstr:
-	gcc $(FLAG) -c srcs/ft_putstr.c includes/ft_putstr.h
+CFLAGS=        -I ./includes/
 
-strcmp:
-	gcc $(FLAG) -c srcs/ft_strcmp.c includes/ft_strcmp.h
+AR=            ar rc
 
-strlen:
-	gcc $(FLAG) -c srcs/ft_strlen.c	includes/ft_strlen.h
+all:        $(NAME)
 
-swap:
-	gcc $(FLAG) -c srcs/ft_swap.c includes/ft_swap.h
+$(NAME):    $(OBJ)
+	        $(AR) $(NAME) $(OBJ)
 
 clean:
-	rm -f $(FUNCTION)
+	        rm -f $(OBJ)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:     clean
+	        rm -f $(NAME)
 
-re: fclean all
+re:            fclean all
+
+.PHONY:    all clean fclean re
