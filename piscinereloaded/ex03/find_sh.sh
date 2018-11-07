@@ -6,8 +6,8 @@
 #    By: vlecoq-v <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 10:46:03 by vlecoq-v          #+#    #+#              #
-#    Updated: 2018/11/06 10:46:13 by vlecoq-v         ###   ########.fr        #
+#    Updated: 2018/11/07 14:47:32 by vlecoq-v         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-find . -name '*.sh' -print | rev | cut -c4- | rev
+find . -name '*.sh' -print | rev | cut -c4- | rev | cut -c3-
