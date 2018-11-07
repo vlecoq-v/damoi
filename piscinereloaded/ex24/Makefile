@@ -6,7 +6,7 @@
 #    By: vlecoq-v <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 18:08:40 by vlecoq-v          #+#    #+#              #
-#    Updated: 2018/11/07 10:59:47 by vlecoq-v         ###   ########.fr        #
+#    Updated: 2018/11/07 16:45:49 by vlecoq-v         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,9 @@ swap:
 	gcc $(FLAG) -c srcs/ft_swap.c includes/ft_swap.h
 
 clean:
-	rm $(FUNCTION)
+	rm -f $(FUNCTION)
 
 fclean: clean
-	rm $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
