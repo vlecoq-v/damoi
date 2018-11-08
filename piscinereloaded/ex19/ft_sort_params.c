@@ -6,11 +6,10 @@
 /*   By: vlecoq-v <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 14:42:50 by vlecoq-v          #+#    #+#             */
-/*   Updated: 2018/11/07 15:32:23 by vlecoq-v         ###   ########.fr       */
+/*   Updated: 2018/11/08 12:03:11 by vlecoq-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "ft_putchar.c"
 
 int		ft_putchar(char c);
@@ -52,7 +51,6 @@ int		main(int argc, char **argv)
 	{
 		if (ft_strcmp(argv[i], argv[i + 1]) > 0)
 		{
-			printf("CHECK %d\n", i);
 			swtch = argv[i];
 			argv[i] = argv[i + 1];
 			argv[i + 1] = swtch;
